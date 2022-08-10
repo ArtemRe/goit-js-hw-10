@@ -74,3 +74,4 @@ function resetHTML(er) {
   refs.card.innerHTML = '';
   refs.ul.innerHTML = '';
 }
+// ffi
