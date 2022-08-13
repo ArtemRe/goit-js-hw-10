@@ -19,12 +19,13 @@ body {
   max-width: 320px;
   margin-bottom: 16px;
 }
-.img-big{
+.country-flag{
 font-weight: 400;
 width: 120px;
 height: 90px;
+margin-right: 15px;
 }
-.contry{
+.country-item{
   display: flex;
   justify-content: flex-start;
   align-items: center;

@@ -1,13 +1,12 @@
-export default class ApiCountries {
-  constructor() {
-    this.input = '';
-    this.endPoint = `https://restcountries.com/v3.1/name/`;
-  }
-  searchCountry() {
-    let url = this.endPoint + this.input;
+export function fetchCountries(name) {
+  const BASE_URL = 'https://restcountries.com/v3.1/name';
 
-    return fetch(url).then(r => {
-      return r.json();
-    });
-  }
+  return fetch(
+    `${BASE_URL}/${name}?fields=name,capital,population,flags,languages`
+  ).then(response => {
+    if (!response.ok) {
+      return Promise.reject('error');
+    }
+    return response.json();
+  });
 }
